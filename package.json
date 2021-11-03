@@ -6,9 +6,8 @@
   "types": "dist/types/index.d.ts",
   "type": "module",
   "scripts": {
-    "tsc": "tsc",
-    "dev": "cross-env NODE_ENV=develop  esmo build/index.ts & tsc --watch",
-    "build": "cross-env NODE_ENV=production esmo build/index.ts & tsc",
+    "dev": "cross-env NODE_ENV=develop npm run clean && esmo build/index.ts && tsc --watch",
+    "build": "cross-env NODE_ENV=production npm run clean && esmo build/index.ts && tsc",
     "clean": "rm -rf dist",
     "lint": "eslint src --ext .js,.ts --cache --fix",
     "prepare": "husky install"
@@ -35,7 +34,6 @@
     "@typescript-eslint/parser": "^5.3.0",
     "cross-env": "^7.0.3",
     "esbuild": "^0.13.12",
-    "esbuild-plugin-tsc": "^0.3.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard": "^16.0.3",

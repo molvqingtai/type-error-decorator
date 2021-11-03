@@ -13,6 +13,4 @@ esbuild
     sourcemap: isDevelop,
     minify: !isDevelop
   })
-  .catch((error) => {
-    console.error('error', error)
-  })
+  .catch(() => process.exit(1))
