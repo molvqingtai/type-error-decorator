@@ -1,7 +1,7 @@
 import esbuild from 'esbuild'
 import { $ } from 'zx'
 
-const isDevelop = process.env.NODE_ENV === 'develop'
+const development = process.env.NODE_ENV === 'development'
 
 void (async () => {
   await $`rm -rf dist`
@@ -12,11 +12,11 @@ void (async () => {
       target: 'esnext',
       format: 'esm',
       bundle: true,
-      watch: isDevelop,
-      sourcemap: isDevelop,
-      minify: !isDevelop
+      watch: development,
+      sourcemap: development,
+      minify: !development
     })
     .then(async (res) => {
-      isDevelop ? await $`tsc --watch` : await $`tsc`
+      development ? await $`tsc --watch` : await $`tsc`
     })
 })().catch(() => process.exit(1))

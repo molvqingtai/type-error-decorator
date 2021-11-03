@@ -6,7 +6,7 @@
   "types": "dist/types/index.d.ts",
   "type": "module",
   "scripts": {
-    "dev": "cross-env NODE_ENV=develop esmo build/index.ts",
+    "dev": "cross-env NODE_ENV=development esmo build/index.ts",
     "build": "cross-env NODE_ENV=production esmo build/index.ts",
     "serve": "live-server",
     "clean": "rm -rf dist",
