@@ -6,8 +6,9 @@
   "types": "dist/types/index.d.ts",
   "type": "module",
   "scripts": {
-    "dev": "cross-env NODE_ENV=develop npm run clean && esmo build/index.ts && tsc --watch",
-    "build": "cross-env NODE_ENV=production npm run clean && esmo build/index.ts && tsc",
+    "dev": "cross-env NODE_ENV=develop esmo build/index.ts",
+    "build": "cross-env NODE_ENV=production esmo build/index.ts",
+    "serve": "live-server",
     "clean": "rm -rf dist",
     "lint": "eslint src --ext .js,.ts --cache --fix",
     "prepare": "husky install"
@@ -46,7 +47,8 @@
     "husky": "^7.0.4",
     "live-server": "^1.2.1",
     "prettier": "^2.4.1",
-    "typescript": "^4.4.4"
+    "typescript": "^4.4.4",
+    "zx": "^4.2.0"
   },
   "publishConfig": {
     "access": "public"
