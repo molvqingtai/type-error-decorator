@@ -8,8 +8,6 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development esmo build/index.ts",
     "build": "cross-env NODE_ENV=production esmo build/index.ts",
-    "serve": "live-server",
-    "clean": "rm -rf dist",
     "lint": "eslint src --ext .js,.ts --cache --fix",
     "prepare": "husky install"
   },
@@ -17,8 +15,8 @@
     "type": "git",
     "url": "git+https://github.com/molvqingtai/type-error-decorator.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["type-error","decorator","type","error"],
+  "author": "molvqingtai",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/molvqingtai/type-error-decorator/issues"
@@ -45,7 +43,6 @@
     "eslint-plugin-promise": "^5.1.1",
     "esmo": "^0.11.0",
     "husky": "^7.0.4",
-    "live-server": "^1.2.1",
     "prettier": "^2.4.1",
     "typescript": "^4.4.4",
     "zx": "^4.2.0"
