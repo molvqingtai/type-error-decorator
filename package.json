@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "TypeError Decorator for JavaScript & TypeScript",
   "main": "dist/index.js",
-  "types": "dist/types/index.d.ts",
+  "types": "dist/types/src/index.d.ts",
   "type": "module",
   "scripts": {
     "dev": "cross-env NODE_ENV=development esmo build/index.ts",

@@ -23,7 +23,7 @@ class Http {
   patch(@TypeParam('Symbol') url: any, options?: any) {}
 }
 
-describe('constructor arguments[0] error', () => {
+describe('Unit tests', () => {
   test('constructor arguments[0] error', () => {
     expect(() => {
       new Http(1)
@@ -44,7 +44,7 @@ describe('constructor arguments[0] error', () => {
     }).toThrowError(new TypeError('post arguments[1] must be Object'))
   })
 
-  test('put arguments[1] error', () => {
+  test('put arguments[0] error', () => {
     expect(() => {
       const http = new Http()
       http.put(1)
@@ -58,7 +58,7 @@ describe('constructor arguments[0] error', () => {
     }).toThrowError(new TypeError('delete arguments[1] is required'))
   })
 
-  test('patch arguments[1] not error', () => {
+  test('patch arguments[0] not error', () => {
     expect(() => {
       const http = new Http()
       http.patch(Symbol('1'))
