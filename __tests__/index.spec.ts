@@ -2,7 +2,7 @@ import { TypeClass, TypeMethod, TypeParam } from '../src'
 
 @TypeClass
 class Http {
-  options
+  options? = {}
   constructor(@TypeParam('Object') options?: any) {
     this.options = options
   }

@@ -43,7 +43,7 @@ import { TypeClass, TypeMethod, TypeParam } from '@resreq/type-error-decorator'
 
 @TypeClass
 class Http {
-  options
+  options? = {}
   constructor(@TypeParam('Object') options?: any) {
     this.options = options
   }
