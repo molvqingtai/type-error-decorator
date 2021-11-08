@@ -49,15 +49,19 @@ export const TypeMethod = (target: object, key: string, descriptor: PropertyDesc
   }
 }
 
-export const TypeParam = (type: string, required?: boolean) => (target: object, key: string, index: number) => {
-  const typeKey = key ? 'method' : 'constructor'
-  const methodKey = key ?? 'constructor'
-  const model: TypeModel = { type, required, index }
-  typesModel.set(
-    typeKey,
-    typesModel.get(typeKey)?.set(methodKey, typesModel.get(typeKey)?.get(methodKey)?.add(model) ?? new Set([model])) ??
-      new Map([[methodKey, new Set([model])]])
-  )
+export const TypeParam =
+  (type: string, required = false) =>
+  (target: object, key: string, index: number) => {
+    const typeKey = key ? 'method' : 'constructor'
+    const methodKey = key ?? 'constructor'
+    const model: TypeModel = { type, required, index }
+    typesModel.set(
+      typeKey,
+      typesModel
+        .get(typeKey)
+        ?.set(methodKey, typesModel.get(typeKey)?.get(methodKey)?.add(model) ?? new Set([model])) ??
+        new Map([[methodKey, new Set([model])]])
+    )
 
-  Reflect.defineMetadata(METADATA_KEY, typesModel, target, 'TypeParam')
-}
+    Reflect.defineMetadata(METADATA_KEY, typesModel, target, 'TypeParam')
+  }
