@@ -15,6 +15,8 @@ module.exports = {
   rules: {
     'prettier/prettier': 'error',
     '@typescript-eslint/strict-boolean-expressions': 'off',
-    '@typescript-eslint/explicit-function-return-type': 'off'
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    'no-new': 'off'
   }
 }
