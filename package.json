@@ -1,6 +1,6 @@
 {
   "name": "@resreq/type-error-decorator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "TypeError Decorator for JavaScript & TypeScript",
   "main": "dist/index.js",
   "types": "dist/types/src/index.d.ts",
