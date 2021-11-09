@@ -84,7 +84,7 @@ http.post(new URL('https://www.example.com/'))
 
 
 
-The decorator uses `Symbol.toStringTag` internally to compare types, so you can use all the built-in constructor names (Upper Camel Case) to define types
+The decorator uses [Symbol.toStringTag](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) internally to compare types, so you can use all the built-in constructor names (Upper Camel Case) to define types.
 
 For example: 
 
@@ -131,4 +131,3 @@ For example:
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/molvqingtai/type-error-decorator/blob/master/LICENSE) file for details
-
