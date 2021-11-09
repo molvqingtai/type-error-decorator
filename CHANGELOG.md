@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/molvqingtai/type-error-decorator/compare/v1.0.1...v1.0.2) (2021-11-09)
+
+
+### Performance Improvements
+
+* change npm scripts ([f97d697](https://github.com/molvqingtai/type-error-decorator/commit/f97d697a404aa03e0ab0bcc90b241c7493848553))
+
 ## [1.0.1](https://github.com/molvqingtai/type-error-decorator/compare/v1.0.0...v1.0.1) (2021-11-09)
 
 
