@@ -10,7 +10,7 @@
     "build": "cross-env NODE_ENV=production esmo build/index.ts",
     "lint": "eslint src __tests__ --ext .js,.ts --cache --fix",
     "test": "jest",
-    "server": "live-server",
+    "serve": "live-server",
     "prepare": "husky install"
   },
   "repository": {
