@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/molvqingtai/type-error-decorator/compare/v1.0.0...v1.0.1) (2021-11-09)
+
+
+### Performance Improvements
+
+* typeParam set default value ([dfa4ebe](https://github.com/molvqingtai/type-error-decorator/commit/dfa4ebeb66da197f30bf36eed31f013129f95e65))
+
 # 1.0.0 (2021-11-08)
 
 
