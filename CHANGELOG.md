@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/molvqingtai/type-error-decorator/compare/v1.0.4...v1.0.5) (2021-11-10)
+
+
+### Performance Improvements
+
+* modify the required default value ([3cc48e1](https://github.com/molvqingtai/type-error-decorator/commit/3cc48e1c069ae7cbfc8671153d91985139c3adaa))
+
 ## [1.0.4](https://github.com/molvqingtai/type-error-decorator/compare/v1.0.3...v1.0.4) (2021-11-09)
 
 
