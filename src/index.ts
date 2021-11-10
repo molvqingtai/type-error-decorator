@@ -50,7 +50,7 @@ export const TypeMethod = (target: object, key: string, descriptor: PropertyDesc
 }
 
 export const TypeParam =
-  (type: string, required = false) =>
+  (type: string, required = true) =>
   (target: object, key: string, index: number) => {
     const typeKey = key ? 'method' : 'constructor'
     const methodKey = key ?? 'constructor'
