@@ -3,7 +3,7 @@ import { TypeClass, TypeMethod, TypeParam } from '../src'
 @TypeClass
 class Http {
   options? = {}
-  constructor(@TypeParam('Object') options?: any) {
+  constructor(@TypeParam('Object', false) options?: any) {
     this.options = options
   }
 
@@ -17,7 +17,7 @@ class Http {
   put(@TypeParam('String|Symbol') url: any, options?: any) {}
 
   @TypeMethod
-  delete(@TypeParam('String') url: any, @TypeParam('Object', true) options?: any) {}
+  delete(@TypeParam('String') url: any, @TypeParam('Object') options?: any) {}
 
   @TypeMethod
   patch(@TypeParam('Symbol') url: any, options?: any) {}

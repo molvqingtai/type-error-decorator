@@ -44,7 +44,7 @@ import { TypeClass, TypeMethod, TypeParam } from '@resreq/type-error-decorator'
 @TypeClass
 class Http {
   options? = {}
-  constructor(@TypeParam('Object') options?: any) {
+  constructor(@TypeParam('Object',false) options?: any) {
     this.options = options
   }
 
@@ -52,7 +52,7 @@ class Http {
   get(@TypeParam('String') url: any, options?: any) {}
 
   @TypeMethod
-  post(@TypeParam('String|URL') url: any, @TypeParam('Object',true) options: any) {}
+  post(@TypeParam('String|URL') url: any, @TypeParam('Object') options: any) {}
 }
 ```
 
@@ -84,7 +84,7 @@ http.post(new URL('https://www.example.com/'))
 
 
 
-The decorator uses [Symbol.toStringTag](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) internally to compare types, so you can use all the built-in constructor names (Upper Camel Case) to define types.
+The decorator uses [Symbol.toStringTag](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) internally to compare types, so you can use all the built-in constructor names (Upper Camel Case) to define types.
 
 For example: 
 
@@ -116,7 +116,7 @@ For example:
 
 
 
-**TypeParam(type, required = false)**
+**TypeParam(type, required = true)**
 
 - **Arguments:**
   - `{string} type`
