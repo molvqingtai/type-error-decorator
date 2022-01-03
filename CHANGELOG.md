@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/molvqingtai/type-error-decorator/compare/v1.0.5...v1.0.6) (2022-01-03)
+
+
+### Performance Improvements
+
+* optimize error message ([73dec20](https://github.com/molvqingtai/type-error-decorator/commit/73dec202c52ec9ef4c4342867e3833f44ba93ebb))
+
 ## [1.0.5](https://github.com/molvqingtai/type-error-decorator/compare/v1.0.4...v1.0.5) (2021-11-10)
 
 
