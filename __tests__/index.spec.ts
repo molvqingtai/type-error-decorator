@@ -14,7 +14,7 @@ class Http {
   post(url: any, @TypeParam('Object') options: any) {}
 
   @TypeMethod
-  put(@TypeParam('String|Symbol') url: any, options?: any) {}
+  put(@TypeParam('String|Symbol|Url') url: any, options?: any) {}
 
   @TypeMethod
   delete(@TypeParam('String') url: any, @TypeParam('Object') options?: any) {}
@@ -48,7 +48,7 @@ describe('Unit tests', () => {
     expect(() => {
       const http = new Http()
       http.put(1)
-    }).toThrowError(new TypeError('put arguments[0] must be String,Symbol'))
+    }).toThrowError(new TypeError('put arguments[0] must be String or Symbol,Url'))
   })
 
   test('delete arguments[1] error', () => {

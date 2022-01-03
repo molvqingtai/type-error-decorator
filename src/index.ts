@@ -22,7 +22,11 @@ const paramsChecker = (models: ParamsModel, params: any[], prefix: string) =>
       throw new TypeError(`${prefix} arguments[${model.index}] is required`)
     }
     if (typeof value !== 'undefined' && !types.some((type: string) => type === typeOf(value))) {
-      throw new TypeError(`${prefix} arguments[${model.index}] must be ${types.toString()}`)
+      if (types.length > 1) {
+        throw new TypeError(`${prefix} arguments[${model.index}] must be ${types.toString().replace(',', ' or ')}`)
+      } else {
+        throw new TypeError(`${prefix} arguments[${model.index}] must be ${types.toString()}`)
+      }
     }
   })
 
